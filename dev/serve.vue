@@ -13,6 +13,6 @@ export default defineComponent({
 
 <template>
   <div id="app">
-    <zero-codes-sample />
+    <layout />
   </div>
 </template>
