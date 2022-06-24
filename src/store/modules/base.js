@@ -1,16 +1,27 @@
 const base = {
   namespaced: true,
   state: () => ({
+    // 姓名
     username: '',
+    // 性别
     sex: '',
+    // 出生日期
     birthday: '',
+    // 邮箱
     email: '',
+    // 电话
     phone: '',
+    // 政治面貌
     political_outlook: '',
+    // 民族
     nation: '',
+    // 常住地址
     address: '',
+    // 毕业院校
     graduated_from: '',
+    // 毕业时间
     graduated_time: '',
+    // 学历
     education: ''
   }),
   mutations: {
@@ -82,8 +93,7 @@ const base = {
     setEducation({ commit }, data) {
       commit('setEducation', data)
     },
-  },
-  getters: {}
+  }
 }
 
 export default base
