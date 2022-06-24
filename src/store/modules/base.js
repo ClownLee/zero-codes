@@ -22,7 +22,9 @@ const base = {
     // 毕业时间
     graduated_time: '',
     // 学历
-    education: ''
+    education: '',
+    // 自我评价
+    self_evaluation: ''
   }),
   mutations: {
     setUsername(state, username) {
@@ -58,6 +60,9 @@ const base = {
     setEducation(state, education) {
       state.education = education
     },
+    setSelfEvaluation(state, self_evaluation) {
+      state.self_evaluation = self_evaluation
+    },
   },
   actions: {
     setUsername({ commit }, data) {
@@ -92,6 +97,9 @@ const base = {
     },
     setEducation({ commit }, data) {
       commit('setEducation', data)
+    },
+    setSelfEvaluation({ commit }, data) {
+      commit('setSelfEvaluation', data)
     },
   }
 }
