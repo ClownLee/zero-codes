@@ -1,0 +1,10 @@
+@include block(home) {
+  background-color: red;
+  color: white;
+  @include element(item) {
+    background-color: aqua;
+    @include modifier(sex) {
+      background-color: blueviolet;
+    }
+  }
+}

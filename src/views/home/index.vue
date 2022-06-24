@@ -40,14 +40,5 @@ console.log(store.state.edu.education)
 
 </script>
 <style lang="scss" scoped>
-@include block(home) {
-  background-color: red;
-  color: white;
-  @include element(item) {
-    background-color: aqua;
-    @include modifier(sex) {
-      background-color: blueviolet;
-    }
-  }
-}
+@import './scss/index.scss';
 </style>
