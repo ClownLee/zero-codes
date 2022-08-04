@@ -29,13 +29,13 @@ export default defineConfig({
    */
   outDir: 'dist',
   // 反向代理
-  /* proxy: {
+  proxy: {
     '/api': {
       target: 'https://mock.apifox.cn/m1/1344760-0-default',
       changeOrigin: true,
       // rewrite: path => path.replace(/^\/api/, '/api')
     }
-  }, */
+  },
   css: {
 		//css预处理
 		preprocessorOptions: {
@@ -50,10 +50,5 @@ export default defineConfig({
 				additionalData: '@import "@/assets/scss/index.scss";'
 			}
 		}
-	},
-  define: {
-    process: {
-      env: process.env
-    }
-  }
+	}
 })
