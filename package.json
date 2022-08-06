@@ -3,13 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development vite ",
-    "build": "cross-env NODE_ENV=production vite build",
-    "preview": "cross-env NODE_ENV=production vite preview"
+    "dev": "vite --mode development",
+    "build": "vite build --mode production",
+    "preview": "vite preview"
   },
   "dependencies": {
     "axios": "^0.27.2",
-    "cross-env": "^7.0.3",
     "crypto-js": "^4.1.1",
     "moment": "^2.29.3",
     "path": "^0.12.7",

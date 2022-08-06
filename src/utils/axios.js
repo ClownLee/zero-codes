@@ -1,10 +1,7 @@
 import axios from 'axios'
-import config from './config'
-
-console.log(config[process.env.NODE_ENV].DOMAIN_API)
 
 const http = axios.create({
-  baseURL: config[process.env.NODE_ENV]?.DOMAIN_API || '',
+  baseURL: import.meta.env.VITE_BASE_URL || '',
   withCredentials: true,
   timeout: 1000 * 10
 })
