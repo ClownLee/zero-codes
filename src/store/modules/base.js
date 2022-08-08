@@ -63,6 +63,9 @@ const base = {
     setSelfEvaluation(state, self_evaluation) {
       state.self_evaluation = self_evaluation
     },
+    setId(state, id) {
+      state.id = id
+    },
   },
   actions: {
     setUsername({ commit }, data) {
@@ -100,6 +103,9 @@ const base = {
     },
     setSelfEvaluation({ commit }, data) {
       commit('setSelfEvaluation', data)
+    },
+    setId({ commit }, data) {
+      commit('setId', data)
     },
   }
 }

@@ -4,26 +4,89 @@
     <div class="zero-home__item">
       {{store.state.base.username}}
       <div class="zero-home__item--sex">
-        {{ store.state.base.sex }}
+        {{ state.baseInfo.username }}
+      </div>
+      <div class="zero-home__item--sex">
+        {{ state.baseInfo.sex }}
+      </div>
+      <div class="zero-home__item--sex">
+        {{ state.baseInfo.phone }}
+      </div>
+      <div class="zero-home__item--sex">
+        {{ state.baseInfo.email }}
+      </div>
+      <div class="zero-home__item--sex">
+        {{ state.baseInfo.birthday }}
+      </div>
+      <div class="zero-home__item--sex">
+        {{ state.baseInfo.nation }}
+      </div>
+      <div class="zero-home__item--sex">
+        {{ state.baseInfo.education }}
+      </div>
+      <div class="zero-home__item--sex">
+        {{ state.baseInfo.graduated_from }}
+      </div>
+      <div class="zero-home__item--sex">
+        {{ state.baseInfo.graduated_time }}
+      </div>
+      <div class="zero-home__item--sex">
+        {{ state.baseInfo.political_outlook }}
+      </div>
+      <div class="zero-home__item--sex">
+        {{ state.baseInfo.self_evaluation }}
       </div>
     </div>
   </div>
 </template>
 <script setup>
-import utils from '@/utils'
+import utils from '@/utils';
+import { reactive } from 'vue';
 import { useStore } from 'vuex';
 import { getBase } from '@/service';
 const store = useStore();
 
+const state = reactive({
+  baseInfo: {}
+});
 
-console.log(getBase())
+const getBaseInfo = async () => {
+  const {
+    address,
+    birthday,
+    education,
+    email,
+    graduated_from,
+    graduated_time,
+    id,
+    nation,
+    phone,
+    political_outlook,
+    self_evaluation,
+    sex,
+    username
+    } = await getBase();
 
+  store.dispatch('base/setAddress', address)
+  store.dispatch('base/setBirthday', birthday)
+  store.dispatch('base/setEducation', education)
+  store.dispatch('base/setEmail', email)
+  store.dispatch('base/setGraduatedFrom', graduated_from)
+  store.dispatch('base/setGraduatedTime', graduated_time)
+  store.dispatch('base/setNation', nation)
+  store.dispatch('base/setPhone', phone)
+  store.dispatch('base/setPoliticalOutlook', political_outlook)
+  store.dispatch('base/setSelfEvaluation', self_evaluation)
+  store.dispatch('base/setSex', sex)
+  store.dispatch('base/setUsername', username)
+  store.dispatch('base/setId', id)
+
+}
+
+
+getBaseInfo();
 /* console.log(utils.getHashId())
 
-store.dispatch('base/setUsername', '张三')
-store.dispatch('base/setPhone', '15708416802')
-store.dispatch('base/setBirthday', '1995-05-03')
-store.dispatch('base/setSex', '男')
 store.dispatch('edu/setEducationOne', {
   edu: '大专',
   school: '四川旅游学院',

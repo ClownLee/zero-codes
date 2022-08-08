@@ -10,8 +10,10 @@
   "dependencies": {
     "axios": "^0.27.2",
     "crypto-js": "^4.1.1",
+    "dotenv": "^16.0.1",
     "moment": "^2.29.3",
     "path": "^0.12.7",
+    "qs": "^6.11.0",
     "vue": "^3.2.25",
     "vue-router": "^4.0.16",
     "vue3-grid-layout": "^1.0.0",
